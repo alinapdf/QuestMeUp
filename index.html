@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="img/favicon.svg" type="image/svg" />
+    <title>Настройки</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="header__menu"></button>
+      <div class="header__wrapper-outer">
+        <div class="header__wrapper">
+          <div class="header__user">
+            <div class="header__user-img">
+              <img
+                src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+                alt="Profile picture"
+                class="profile-picture"
+                style="display: none"
+              />
+              <p class="user__initial">А</p>
+              <p class="user__initial">Х</p>
+            </div>
+
+            <div class="header__user-information item-inactive">
+              <p class="header__user-name">Алина Хамова</p>
+              <p class="header__user-email">hamovaa14@gmail.com</p>
+            </div>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-list_item">
+                <button class="header__nav-list_item-btn">
+                  <img
+                    src="img/section-icon-active.svg"
+                    alt="Section"
+                    class="header__menu-icon_active"
+                  />
+                  <img src="img/section-icon.svg" alt="Section" />
+                </button>
+                <p class="header__nav-list_item-name item-inactive">Раздел 1</p>
+              </li>
+              <li class="header__nav-list_item">
+                <button class="header__nav-list_item-btn">
+                  <img
+                    src="img/section-icon-active.svg"
+                    alt="Section"
+                    class="header__menu-icon_active"
+                  />
+                  <img src="img/section-icon.svg" alt="Section" />
+                </button>
+                <p class="header__nav-list_item-name item-inactive">Раздел 2</p>
+              </li>
+              <li class="header__nav-list_item">
+                <button class="header__nav-list_item-btn">
+                  <img
+                    src="img/section-icon-active.svg"
+                    alt="Section"
+                    class="header__menu-icon_active"
+                  />
+                  <img src="img/section-icon.svg" alt="Section" />
+                </button>
+                <p class="header__nav-list_item-name item-inactive">Раздел 3</p>
+              </li>
+              <li class="header__nav-list_item">
+                <button class="header__nav-list_item-btn">
+                  <img
+                    src="img/section-icon-active.svg"
+                    alt="Section"
+                    class="header__menu-icon_active"
+                  />
+                  <img src="img/section-icon.svg" alt="Section" />
+                </button>
+                <p class="header__nav-list_item-name item-inactive">Раздел 4</p>
+              </li>
+              <li class="header__nav-list_item header__nav-list_item-active">
+                <button class="header__nav-list_item-btn">
+                  <img
+                    src="img/settings-icon-active.svg"
+                    alt="Section"
+                    class="header__menu-icon_active"
+                  />
+                  <img src="img/settings-icon.svg" alt="Section" />
+                </button>
+                <p class="header__nav-list_item-name item-inactive">
+                  Настройки
+                </p>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <h1 class="main__header">Настройки профиля</h1>
+        <form action="#" class="profile__form">
+          <div class="form__profile_general">
+            <h2 class="section__header">Профиль</h2>
+            <div class="profile__user">
+              <div class="user__profile__img">
+                <img
+                  src="https://www.svgrepo.com/show/508699/landscape-placeholder.svg"
+                  alt="Profile picture"
+                  class="profile-picture"
+                  style="display: none"
+                />
+                <div class="user__profile-initials">
+                  <p class="profile-initials_item">А</p>
+                  <p class="profile-initials_item">Х</p>
+                </div>
+              </div>
+              <div class="profile__user-info_wrapper">
+                <div class="profile__user-wrapper-names">
+                  <p class="profile__user-name">Алина Хамова</p>
+                  <p class="profile__user-email">hamovaa14@gmail.com</p>
+                </div>
+
+                <div class="profile__btns-wrapper">
+                  <label
+                    for="fileInput"
+                    class="update-photo__label btn mini-btn"
+                  >
+                    Обновить фото
+                    <input
+                      type="file"
+                      id="fileInput"
+                      accept="image/*"
+                      style="display: none"
+                    />
+                  </label>
+
+                  <button class="delete-photo disabled" id="deletePhotoBtn">
+                    Удалить фото
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-wrapper">
+              <label for="name" class="profile-form_label">
+                <p class="input-header">Имя</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="Имя"
+                  id="name"
+                  tabindex="1"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <label for="surname" class="profile-form_label">
+                <p class="input-header">Фамилия</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="Фамилия"
+                  id="surname"
+                  tabindex="2"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <label for="dateInput" class="profile-form_label"
+                ><p class="input-header">Дата рождения</p>
+                <input
+                  type="text"
+                  id="dateInput"
+                  placeholder="__/__/____"
+                  maxlength="10"
+                  class="dateInput"
+                  tabindex="3"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <label for="phone-number" class="profile-form_label">
+                <p class="input-header">Номер телефона</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="+7 (000) 000 00 00"
+                  id="phone-number"
+                  tabindex="4"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <label for="email" class="profile-form_label">
+                <p class="input-header">E-mail</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="someone@example.com"
+                  id="email"
+                  tabindex="5"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <div class="profile-form__gender profile-form_label">
+                <p class="profile-form_label input-header">Пол</p>
+                <div class="profile-form__gender-current">Выберите пол</div>
+                <div class="profile-form__gender-body">
+                  <div class="profile-form__gender-body-option">Мужской</div>
+                  <div class="profile-form__gender-body-option">Женский</div>
+                  <div class="profile-form__gender-body-option">Другое</div>
+                </div>
+                <span class="error-message"> *Пустое поле </span>
+              </div>
+            </div>
+            <div class="form-optional-information">
+              <label for="country" class="profile-form_label">
+                <p class="input-header">Страна</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="Страна"
+                  id="country"
+                  tabindex="6"
+                />
+              </label>
+              <label for="city" class="profile-form_label">
+                <p class="input-header">Город</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="Город"
+                  id="city"
+                  tabindex="7"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form__system-settings_general">
+            <h2 class="section__header">Системные настройки</h2>
+
+            <div class="form-wrapper">
+              <label
+                for="change-password"
+                class="profile-form_label input__password"
+              >
+                <p class="input-header">Сменить пароль</p>
+                <input
+                  type="password"
+                  class="profile-form_input"
+                  placeholder="Новый пароль"
+                  id="change-password"
+                  tabindex="8"
+                />
+                <button class="show-password">
+                  <img src="img/show-password-icon.svg" alt="show password" />
+                </button>
+                <button class="hide-password display-none">
+                  <img
+                    src="img/hide-password-icon.svg"
+                    alt="hide-password "
+                    class="hide-password"
+                  />
+                </button>
+
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+              <label for="confirm-password" class="profile-form_label">
+                <p class="input-header">Подтвердить пароль</p>
+                <input
+                  type="password"
+                  class="profile-form_input"
+                  placeholder="Подтвердить новый пароль"
+                  id="confirm-password"
+                  tabindex="9"
+                />
+                <span class="error-message"> *Пустое поле </span>
+              </label>
+            </div>
+            <div class="form-optional-information">
+              <label for="language" class="profile-form_label">
+                <p class="input-header">Язык интерфейса</p>
+                <input
+                  type="text"
+                  class="profile-form_input"
+                  placeholder="Язык интерфейса"
+                  id="language"
+                  value="Русский"
+                  tabindex="10"
+                />
+              </label>
+            </div>
+          </div>
+
+          <div class="form-numerology">
+            <div class="form-numerology_wrapper">
+              <h2 class="section__header numerology__header">Нумерология</h2>
+              <label class="form__input-checkbox">
+                <input type="checkbox" class="numerology-checkbox" />
+                <span class="checkbox-custom"></span>
+                <p class="input-header">
+                  Согласие на получение нумерологического отчета
+                </p>
+              </label>
+            </div>
+          </div>
+
+          <div class="form__btns">
+            <button class="btn big-btn form__save-changes">
+              Сохранить изменения
+            </button>
+            <button class="btn2 big-btn">Отмена</button>
+          </div>
+        </form>
+      </div>
+    </main>
+    <section class="pop-up display-none">
+      <div class="pop-up-wrapper">
+        <p class="pop-up-header">Введите данные для нумерологического отчета</p>
+        <button class="white-cross">
+          <img src="img/close-pop-up-icon.svg" alt="close" />
+        </button>
+        <form action="#" class="pop-up__form">
+          <label for="fio" class="profile-form_label">
+            <p class="input-header">Полное имя</p>
+            <input
+              type="text"
+              class="profile-form_input"
+              placeholder="ФИО"
+              id="fio"
+            />
+          </label>
+          <label for="dateInput" class="profile-form_label"
+            ><p class="input-header">Дата рождения</p>
+            <input
+              type="text"
+              id="dateInput2"
+              placeholder="__/__/____"
+              maxlength="10"
+              class="dateInput"
+            />
+            <span class="error-message"> *Пустое поле </span>
+          </label>
+          <button class="btn pop-up__form-btn big-btn">Сохранить данные</button>
+        </form>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
